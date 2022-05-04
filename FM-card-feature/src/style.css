@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    color: var(--Very-Dark-Blue);
+}
+footer{
+    text-align: center;
+    font-size: .9rem;
+}
+a{
+    color: black;
+}
+
+.container{
+    width: 90%;
+    margin: 2em auto;
+}
+
+.heading{
+    max-width: 500px;
+    margin: 0 auto;
+}
+.heading h1{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    margin-bottom: .5em;
+}
+.heading span{
+    font-weight: 700;
+}
+.heading p{
+    text-align: center;
+    font-weight: 200;
+}
+
+.cards{
+    width: 90%;
+    margin: 4em auto;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2em;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Very-Light-Gray);
+    padding: 1em;
+    box-shadow: 5px 10px 20px var(--Grayish-Blue);
+    border-top: 5px solid var(--Cyan);
+    font-size: 1.2rem;
+}
+.card p{
+    padding: .5em 0;
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+.card img{
+    margin: 1em 1em;
+    width: 30%;
+    align-self: flex-end;
+}
+
+.card:nth-child(2){
+    border-top: 5px solid var(--Red);
+}
+.card:nth-child(3){
+    border-top: 5px solid var(--Orange);
+}
+.card:nth-child(4){
+    border-top: 5px solid var(--Blue);
+}
+
+@media (min-width: 40em){
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 60em){
+    .cards{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        position: relative;
+    }
+    :is(.card:nth-child(1), .card:nth-child(4)){
+        position: relative;
+        top: 50%;
+    }
+    .card:nth-child(3){
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+}

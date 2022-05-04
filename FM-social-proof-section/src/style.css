@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root{
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%)
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--White);
+    font-family: 'League Spartan', sans-serif;
+}
+footer{
+    width: 100%;
+    text-align: center;
+    margin-top: 2em;
+}
+.container{
+    padding: 3em;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 2em;
+}
+
+.heading{
+    max-width: 600px;
+}
+.heading h2{
+    font-size: 3rem;
+    color: var(--Very-Dark-Magenta);
+    text-align: center;
+}
+.heading p{
+    margin-top: 1.5em;
+    font-size: 1.2rem;
+    color: var(--Dark-Grayish-Magenta);
+    text-align: center;
+}
+
+.rating{
+    margin: .8em 0;
+    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Light-Grayish-Magenta);
+    border-radius: 20px;
+}
+.rating img{
+    padding: 0 .2em;
+}
+.rating p{
+    font-size: 1.2rem;
+    margin-top: 1em;
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+}
+
+.reviews{
+    width: 90%;
+    margin: 0 auto;
+}
+.review{
+    margin: 1em 1em;
+    background-color: var(--Very-Dark-Magenta);
+    border-radius: 20px;
+    padding: 2em;
+    color: var(--White);
+}
+.user{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    font-size: 1.3rem;
+}
+.user span{
+    color: var(--Soft-Pink);
+    font-size: 1.1rem;
+}
+.review img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.review p{
+    margin-top: 1em;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+
+@media(min-width:45em){
+    .container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .rating:nth-child(1){
+        position: relative;
+        left: 30px;
+    }
+    .rating:nth-child(3){
+        position: relative;
+        left: -30px;
+    }
+    :is(.heading h2, .heading p){
+        text-align: left;
+    }
+}
+
+@media(min-width:70em){
+    .container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .rating{
+        flex-direction: row;
+        gap: 1em;
+    }
+    .rating img{
+        margin-top: 15px;
+    }
+
+    .reviews{
+        display: flex;
+    }
+    .review:nth-child(2){
+        position: relative;
+        top: 20px;
+    }
+    .review:nth-child(3){
+        position: relative;
+        top: 40px;
+    }
+    footer{
+        position: absolute;
+    bottom: 10px;
+    }
+
+}

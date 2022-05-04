@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--Very-dark-blue-main-BG);
+    font-family: 'Outfit', sans-serif;
+    color: var(--Soft-blue);
+}
+a{
+    color: var(--Soft-blue);
+}
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+.container{
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    max-width: 400px;
+    border-radius: 20px;
+    background-color: var(--Very-dark-blue-card-BG);
+    padding: 2em;
+}
+.card > .art-pice{
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.eye{
+    display: none;
+    position: absolute;
+    top:25%;
+    left: 45%;
+    cursor: pointer;
+
+}
+.card > .art-pice:hover{
+    filter: blur(2px);
+}
+.card > .art-pice:hover + .eye{
+    display: block;
+    width: 70px;
+}
+.eye:hover{
+    display: block;
+    width: 70px;
+}
+.card > h2{
+    margin-top: 1em;
+    font-size: 1.6rem;
+    color: var(--White);
+}
+.card > p{
+    font-size: 1.1rem;
+    margin-top: .5em;
+    font-weight: 200;
+}
+
+.info{
+    margin: 1.5em 0;
+    display: flex;
+    align-items: center;
+    font-weight: 200;
+    font-size: 1.2rem;
+    justify-content: space-between;
+}
+.price{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: var(--Cyan);
+}
+.price > img{
+    width: 20px;
+    margin-right: .5em;
+}
+.user{
+    border-top: 2px solid var(--Very-dark-blue-line);
+    padding-top: 1em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.user h4{
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+.user span{
+    font-weight: 400;
+    color: var(--White);
+}
+.user > img{
+    width: 40px;
+    margin-right: 1em;
+    border: 2px solid var(--White);
+    border-radius: 100%;
+}
